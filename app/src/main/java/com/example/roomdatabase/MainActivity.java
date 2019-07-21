@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             if (savedInstanceState != null) {
                 return;
             }
-            fragmentManager.beginTransaction().add(R.id.fragment_container,new HomeFragment()).commit();
+            fragmentManager.beginTransaction().add(R.id.fragment_container,new HomeFragment()).addToBackStack(null).commit();
         }
 
 

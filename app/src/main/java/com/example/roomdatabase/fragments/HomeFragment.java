@@ -14,7 +14,7 @@ import com.example.roomdatabase.R;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    private Button BnAddUser, BnReadUser, BnDelete;
+    private Button BnAddUser, BnReadUser, BnDelete, BnUpdate;
 
     public HomeFragment() {
 
@@ -33,10 +33,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         BnAddUser = view.findViewById(R.id.bn_add_users);
         BnReadUser = view.findViewById(R.id.bn_view_users);
         BnDelete = view.findViewById(R.id.bn_delete_users);
+        BnUpdate = view.findViewById(R.id.bn_update_users);
 
         BnReadUser.setOnClickListener(this);
         BnAddUser.setOnClickListener(this);
         BnDelete.setOnClickListener(this);
+        BnUpdate.setOnClickListener(this);
 
     }
 
@@ -46,15 +48,19 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (view.getId()) {
 
             case R.id.bn_add_users:
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new AddUserFragment()).commit();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new AddUserFragment()).addToBackStack(null).commit();
                 break;
 
             case R.id.bn_view_users:
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new ReadUserFragment()).commit();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new ReadUserFragment()).addToBackStack(null).commit();
                 break;
 
             case R.id.bn_delete_users:
-                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new DeleteUserFragment()).commit();
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new DeleteUserFragment()).addToBackStack(null).commit();
+                break;
+
+            case R.id.bn_update_users:
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new UpdateFragment()).addToBackStack(null).commit();
                 break;
         }
     }
