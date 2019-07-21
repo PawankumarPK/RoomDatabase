@@ -14,7 +14,7 @@ import com.example.roomdatabase.R;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
 
-    private Button BnAddUser, BnReadUser;
+    private Button BnAddUser, BnReadUser, BnDelete;
 
     public HomeFragment() {
 
@@ -32,9 +32,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         BnAddUser = view.findViewById(R.id.bn_add_users);
         BnReadUser = view.findViewById(R.id.bn_view_users);
+        BnDelete = view.findViewById(R.id.bn_delete_users);
 
         BnReadUser.setOnClickListener(this);
         BnAddUser.setOnClickListener(this);
+        BnDelete.setOnClickListener(this);
 
     }
 
@@ -49,6 +51,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
             case R.id.bn_view_users:
                 MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new ReadUserFragment()).commit();
+                break;
+
+            case R.id.bn_delete_users:
+                MainActivity.fragmentManager.beginTransaction().replace(R.id.fragment_container, new DeleteUserFragment()).commit();
                 break;
         }
     }

@@ -1,6 +1,7 @@
 package com.example.roomdatabase;
 
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
@@ -19,4 +20,8 @@ public interface MyDao {
     //get Data from DB
     @Query("select * from users")
     public List<User> getUsers();
+
+    //delete user from DB
+    @Delete
+    public void deleteUser(User user);
 }
