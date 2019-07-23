@@ -41,22 +41,22 @@ class HomeFragment : Fragment(), View.OnClickListener {
 
         when (view.id) {
 
-            R.id.bn_add_users -> MainActivity.fragmentManager.beginTransaction().replace(
+            R.id.bn_add_users -> MainActivity.fragmentManager!!.beginTransaction().replace(
                 R.id.fragment_container,
                 AddUserFragment()
             ).addToBackStack(null).commit()
 
-            R.id.bn_view_users -> MainActivity.fragmentManager.beginTransaction().replace(
+            R.id.bn_view_users -> MainActivity.fragmentManager!!.beginTransaction().replace(
                 R.id.fragment_container,
                 ReadUserFragment()
             ).addToBackStack(null).commit()
 
-            R.id.bn_delete_users -> MainActivity.fragmentManager.beginTransaction().replace(
+            R.id.bn_delete_users -> MainActivity.fragmentManager!!.beginTransaction().replace(
                 R.id.fragment_container,
                 DeleteUserFragment()
             ).addToBackStack(null).commit()
 
-            R.id.bn_update_users -> MainActivity.fragmentManager.beginTransaction().replace(
+            R.id.bn_update_users -> MainActivity.fragmentManager!!.beginTransaction().replace(
                 R.id.fragment_container,
                 UpdateFragment()
             ).addToBackStack(null).commit()

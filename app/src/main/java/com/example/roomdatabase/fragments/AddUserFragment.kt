@@ -50,7 +50,7 @@ class AddUserFragment : Fragment() {
             user.email = useremail
 
             //insert data into table
-            MainActivity.myAppDatabase.myDao().addUser(user)
+            MainActivity.myAppDatabase!!.myDao().addUser(user)
             Toast.makeText(activity, "User Added Successfully  ", Toast.LENGTH_SHORT).show()
 
             UserId!!.setText("")

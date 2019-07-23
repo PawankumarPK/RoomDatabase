@@ -26,7 +26,7 @@ class ReadUserFragment : Fragment() {
 
         TxtInfo = view.findViewById(R.id.txt_display_info)
 
-        val users = MainActivity.myAppDatabase.myDao().users
+        val users = MainActivity.myAppDatabase!!.myDao().users
         var info = ""
 
         for (usr in users) {

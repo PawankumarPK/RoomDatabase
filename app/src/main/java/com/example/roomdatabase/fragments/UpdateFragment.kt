@@ -47,7 +47,7 @@ class UpdateFragment : Fragment() {
             user.name = name
             user.email = email
 
-            MainActivity.myAppDatabase.myDao().updateUser(user)
+            MainActivity.myAppDatabase!!.myDao().updateUser(user)
             Toast.makeText(context, "User Update Successful", Toast.LENGTH_SHORT).show()
 
             UserId!!.setText("")
