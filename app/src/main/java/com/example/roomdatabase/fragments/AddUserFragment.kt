@@ -43,11 +43,11 @@ class AddUserFragment : Fragment() {
 
             val user = User()
             user.id = userid
-            user.name = username
-            user.email = useremail
+            user.username = username
+            user.useremail = useremail
 
             //insert data into table
-            MainActivity.myAppDatabase!!.myDao().addUser(user)
+            MainActivity.INSTANCE!!.myDao().addUser(user)
             Toast.makeText(activity, "User Added Successfully  ", Toast.LENGTH_SHORT).show()
 
             UserId!!.setText("")

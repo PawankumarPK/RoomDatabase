@@ -3,48 +3,50 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:gravity="center_horizontal"
               android:orientation="vertical"
-              tools:context=".fragments.HomeFragment">
-
-    <Button
-            android:id="@+id/bn_add_users"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Add Users"
-            android:textSize="25sp"
-            android:gravity="center_horizontal"
-            android:layout_marginTop="100dp"/>
+              tools:context=".fragments.InsertDataFragment">
 
 
     <Button
-            android:id="@+id/bn_view_users"
-            android:layout_width="wrap_content"
+            android:id="@+id/mInsertData"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="View Users"
-            android:textSize="25sp"
+            android:text="Insert Data"
+            android:textSize="20sp"
             android:gravity="center_horizontal"
-            android:layout_marginTop="40dp"/>
+            android:layout_margin="20dp"/>
 
-
-    <Button
-            android:id="@+id/bn_delete_users"
-            android:layout_width="wrap_content"
+    <Button android:id="@+id/mDeleteData"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Delete Users"
-            android:textSize="25sp"
+            android:text="Delete Data"
+            android:textSize="20sp"
             android:gravity="center_horizontal"
-            android:layout_marginTop="40dp"/>
+            android:layout_margin="20dp"/>
 
-
-    <Button
-            android:id="@+id/bn_update_users"
-            android:layout_width="wrap_content"
+    <Button android:id="@+id/mUpdateData"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Update Users "
-            android:textSize="25sp"
+            android:text="Update Data"
+            android:textSize="20sp"
             android:gravity="center_horizontal"
-            android:layout_marginTop="40dp"/>
+            android:layout_margin="20dp"/>
 
+    <Button android:id="@+id/mGetData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Data"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:layout_margin="20dp"/>
+
+
+    <Button android:id="@+id/mGetDataList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Get Data List"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:layout_margin="20dp"/>
 
 </LinearLayout>

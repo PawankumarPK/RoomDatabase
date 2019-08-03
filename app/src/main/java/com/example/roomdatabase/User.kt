@@ -1,21 +1,25 @@
 package com.example.roomdatabase
 
-
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 
-//first class
-@Entity(tableName = "users")
+@Entity(tableName = "usersDB")
 class User {
 
     @PrimaryKey
-    var id: Int = 0
+    var id: Int? = null
 
     @ColumnInfo(name = "user_name")
-    var name: String? = null
+    var username: String? = null
+
+    @ColumnInfo(name = "user_surname")
+    var usersurname: String? = null
 
     @ColumnInfo(name = "user_email")
-    var email: String? = null
+    var useremail: String? = null
+
+    @ColumnInfo(name = "user_dob")
+    var userdob: Int? = null
 }

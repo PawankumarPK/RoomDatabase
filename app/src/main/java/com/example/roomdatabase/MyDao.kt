@@ -8,8 +8,8 @@ import androidx.room.*
 interface MyDao {
 
     //get Data from DB
-    @get:Query("select * from users")
-    val users: List<User>
+    @get:Query("select * from usersDB")
+    val user: List<User>
 
 
     //insert data in DB

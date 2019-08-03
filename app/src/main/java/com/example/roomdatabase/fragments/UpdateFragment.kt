@@ -44,10 +44,10 @@ class UpdateFragment : Fragment() {
             val user = User()
 
             user.id = id
-            user.name = name
-            user.email = email
+            user.username = name
+            user.useremail = email
 
-            MainActivity.myAppDatabase!!.myDao().updateUser(user)
+            MainActivity.INSTANCE!!.myDao().updateUser(user)
             Toast.makeText(context, "User Update Successful", Toast.LENGTH_SHORT).show()
 
             UserId!!.setText("")

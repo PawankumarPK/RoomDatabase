@@ -36,7 +36,7 @@ class DeleteUserFragment : Fragment() {
 
             val user = User()
             user.id = id
-            MainActivity.myAppDatabase!!.myDao().deleteUser(user)
+            MainActivity.INSTANCE!!.myDao().deleteUser(user)
 
             Toast.makeText(context, "User Successfully Delete", Toast.LENGTH_SHORT).show()
             TxtUserId!!.setText("")

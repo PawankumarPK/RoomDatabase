@@ -26,14 +26,14 @@ class ReadUserFragment : Fragment() {
 
         TxtInfo = view.findViewById(R.id.txt_display_info)
 
-        val users = MainActivity.myAppDatabase!!.myDao().users
+        val users = MainActivity.INSTANCE!!.myDao().user
         var info = ""
 
         for (usr in users) {
 
             val id = usr.id
-            val name = usr.name
-            val email = usr.email
+            val name = usr.username
+            val email = usr.useremail
 
             info = "$info\n\nId : $id\nName : $name\nEmail : $email"
         }
