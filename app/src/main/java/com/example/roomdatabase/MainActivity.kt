@@ -39,4 +39,4 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack(null)
             .commit()
     }
-}
+}//add Live Data with view model
